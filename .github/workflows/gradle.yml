@@ -20,8 +20,8 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: Run  &
-      run:  java -jar ./artifacts/app-ibank.jar -port=9999 -P:profile=test && 
+    - name: Run app-ibank.jar &
+      run:  java -jar ./artifacts/app-ibank.jar -port=9999 -P:profile=test &
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
